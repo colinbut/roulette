@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+    <!-- enable component scanning -->
+    <context:component-scan base-package="com.mycompany.roulette"/>
+
+    <!-- Task Scheduling configuration -->
+    <task:scheduler id="scheduler" pool-size="2"/>
+    <task:executor id="taskExecutor" pool-size="5"/>
+    <task:annotation-driven executor="taskExecutor" scheduler="scheduler"/>
+
+    <!-- read config properties -->
+    <bean id="configProperties"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:config.properties" />
+    </bean>
+
+    <!-- Game entry bean -->
+    <bean id="roulette" class="com.mycompany.roulette.Roulette">
+    </bean>
+
+</beans>
