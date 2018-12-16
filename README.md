@@ -2,21 +2,30 @@
 
 ![Image of Roulette](etc/roulette.png)
 
-## Configuration
+## Table of Contents
+
+* [Configuration](#configuration)
+* [Build](#build)
+* [Running the Game](#running-the-game)
+* [Stopping the Game](#stopping-the-game)
+* [Logging](#logging)
+* [Limitations](#limitations)
+
+## <a name="configuration"></a>Configuration
 
 A config.properties file is provided to conifgure and tune certain properties
 The time between each random number is generated can be configured - default to 30 seconds
 
 The input file path to the game is also configurable. Need to make sure it points to the correct path.
 
-## Build
+## <a name="build"></a>Build
 
 ```bash
 mvn clean verify
 ```
 
 
-## Running the Game
+## <a name="running-the-game"></a>Running the Game
 
 1) Run from terminal/Command line
 
@@ -34,7 +43,11 @@ java -cp ".:lib/*" Roulette
 
 Main class in Roulette.java
 
-## Logging
+## <a name="stopping-the-game"></a>Stopping the Game
+
+if game is run from terminal, `ctrl-c` or similar will kill the program, likewise when run from IDE can be stopped from IDE controls
+
+## <a name="logging"></a>Logging
 
 Logging is available and SLF4j is used with Log4j the implementation
 
@@ -44,11 +57,7 @@ Currently set to DEBUG level.
 
 The log file is `output.log`
 
-## Stopping the Game
-
-if game is run from terminal, `ctrl-c` or similar will kill the program, likewise when run from IDE can be stopped from IDE controls
-
-## Limitations
+## <a name="limitations"></a>Limitations
 
 1) There is a single console for both reading in lines and outputting betting results
 2) The system console is from a terminal window/command line
