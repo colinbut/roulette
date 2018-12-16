@@ -1,3 +1,8 @@
+/*
+ * |-------------------------------------------------
+ * | Copyright © 2016 Colin But. All rights reserved.
+ * |-------------------------------------------------
+ */
 package com.mycompany.roulette.controller;
 
 import com.mycompany.roulette.model.core.GamePlayerThread;
