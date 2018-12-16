@@ -1,5 +1,7 @@
 # Roulette
 
+![Image of Roulette](etc/roulette.png)
+
 ## Configuration
 
 A config.properties file is provided to conifgure and tune certain properties
